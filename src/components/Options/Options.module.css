@@ -1,0 +1,17 @@
+.feedbackButtonsList {
+  display: flex;
+}
+
+.feedbackButtonsList button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: darkgrey;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.feedbackButtonsList button:hover {
+  background-color: gray;
+}
