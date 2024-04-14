@@ -30,7 +30,7 @@ function App() {
   
   const totalFeedback = values.good + values.neutral + values.bad;
   
-  const totalPositive = totalReviews > 0 ? Math.round(((reviews.good + reviews.neutral) / totalReviews) * 100) : 0;
+  const totalPositive = totalFeedback > 0 ? Math.round(((values.good + values.neutral) / totalvalues) * 100) : 0;
   const handleReset = () => {
     setValues({
       good: 0,
@@ -45,12 +45,12 @@ function App() {
       <Options
         onButtonClick={onButtonClick}
         onResetClick={onResetClick}
-        totalReviews={totalReviews}
+        totalFeedback={totalFeedback}
       />
-      {totalReviews === 0 ? (
+      {totalFeedback === 0 ? (
         <Notification />
       ) : (
-        <Feedback total={totalReviews} reviews={reviews} positivePercentage={totalPositive} />
+        <Feedback total={totalFeedback} values={values} positivePercentage={totalPositive} />
       )}
     </>
   );
